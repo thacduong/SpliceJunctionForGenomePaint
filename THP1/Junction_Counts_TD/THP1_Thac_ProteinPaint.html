@@ -1,0 +1,151 @@
+ <!DOCTYPE html>
+<html>
+<body>
+<script src="http://genomeproteinpaint.moffitt.org/bin/proteinpaint.js" charset="utf-8"></script>
+
+<div id=a style="margin:10px"></div>
+<!--<script src="http://genomeproteinpaint.moffitt.org/bin/proteinpaint.js" charset="utf-8"></script>-->
+<script src="https://proteinpaint.stjude.org/bin/proteinpaint.js" charset="utf-8"></script>
+
+<div id=a style="margin:10px"></div>
+
+<script>
+runproteinpaint({
+    host: "https://proteinpaint.stjude.org/",
+    holder: document.getElementById('a'),
+    parseurl: true,
+    block: true,
+    nobox: 1,
+    noheader: 1,
+    genome: "hg38",
+    position: "chr5:1019543-1142903",
+    hlights: "chr5:1081895-1115816",
+    nativetracks: "RefGene",
+    tracks: [
+    {
+      __isgene: true,
+      translatecoding: true,
+      categories: {
+        coding: { color: '#004D99', label: 'Coding gene' },
+        nonCoding: { color: '#009933', label: 'Noncoding gene' },
+        problem: { color: '#FF3300', label: 'Problem' },
+        pseudo: { color: '#FF00CC', label: 'Pseudogene' }
+      },
+      type: 'bedj',
+      name: 'GENCODE v34',
+      stackheight: 16,
+      stackspace: 1,
+      vpad: 4,
+      //url: 'http://biostools/4472414/Shiny/References/proteinpaint/anno/gencode.v34.hg38.gz'
+      file: 'anno/gencode.v34.hg38.gz'
+    },
+   
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/blob/main/THP1/Junction_Counts_TD/BED_Files/bed_index/ERP004573_junctions.bed.sorted.gz",
+name: "ERP004573 THP1",
+height: 10,
+},
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/blob/main/THP1/Junction_Counts_TD/BED_Files/bed_index/SRP012695_junctions.bed.sorted.gz",
+name: "SRP012695 THP1",
+height: 10,
+},
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/blob/main/THP1/Junction_Counts_TD/BED_Files/bed_index/SRP018312_junctions.bed.sorted.gz",
+name: "SRP018312 THP1",
+height: 10,
+},
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/blob/main/THP1/Junction_Counts_TD/BED_Files/bed_index/SRP045986_junctions.bed.sorted.gz",
+name: "SRP045986 THP1",
+height: 10,
+},
+
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/blob/main/THP1/Junction_Counts_TD/BED_Files/bed_index/SRP048744_junctions.bed.sorted.gz",
+name: "SRP048744 THP1",
+height: 10,
+},
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/blob/main/THP1/Junction_Counts_TD/BED_Files/bed_index/SRP064735_junctions.bed.sorted.gz",
+name: "SRP064735 THP1",
+height: 10,
+},
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/blob/main/THP1/Junction_Counts_TD/BED_Files/bed_index/SRP068909_junctions.bed.sorted.gz",
+name: "SRP068909 THP1",
+height: 10,
+},
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/blob/main/THP1/Junction_Counts_TD/BED_Files/bed_index/SRP107875_junctions.bed.sorted.gz",
+name: "SRP107875 THP1",
+height: 10,
+},
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/blob/main/THP1/Junction_Counts_TD/BED_Files/bed_index/SRP120559_junctions.bed.sorted.gz",
+name: "SRP120559 THP1",
+height: 10,
+},
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/blob/main/THP1/Junction_Counts_TD/BED_Files/bed_index/SRP125444_junctions.bed.sorted.gz",
+name: "SRP125444 THP1",
+height: 10,
+},
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/blob/main/THP1/Junction_Counts_TD/BED_Files/bed_index/SRP127832_junctions.bed.sorted.gz",
+name: "SRP127832 THP1",
+height: 10,
+},
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/blob/main/THP1/Junction_Counts_TD/BED_Files/bed_index/SRP128903_junctions.bed.sorted.gz",
+name: "SRP128903 THP1",
+height: 10,
+},
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/blob/main/THP1/Junction_Counts_TD/BED_Files/bed_index/SRP153417_junctions.bed.sorted.gz",
+name: "SRP153417 THP1",
+height: 10,
+},
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/blob/main/THP1/Junction_Counts_TD/BED_Files/bed_index/SRP153913_junctions.bed.sorted.gz",
+name: "SRP153913 THP1",
+height: 10,
+},
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/blob/main/THP1/Junction_Counts_TD/BED_Files/bed_index/SRP188099_junctions.bed.sorted.gz",
+name: "SRP188099 THP1",
+height: 10,
+},
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/blob/main/THP1/Junction_Counts_TD/BED_Files/bed_index/SRP213631_junctions.bed.sorted.gz",
+name: "SRP213631 THP1",
+height: 10,
+},
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/blob/main/THP1/Junction_Counts_TD/BED_Files/bed_index/SRP215279_junctions.bed.sorted.gz",
+name: "SRP215279 THP1",
+height: 10,
+},
+    ]
+})
+
+</script>
+</body>
+</html>
