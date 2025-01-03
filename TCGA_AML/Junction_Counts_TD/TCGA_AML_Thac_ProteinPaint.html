@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<html>
+<body>
+<script src="http://genomeproteinpaint.moffitt.org/bin/proteinpaint.js" charset="utf-8"></script>
+
+<div id=a style="margin:10px"></div>
+<!--<script src="http://genomeproteinpaint.moffitt.org/bin/proteinpaint.js" charset="utf-8"></script>-->
+<script src="https://proteinpaint.stjude.org/bin/proteinpaint.js" charset="utf-8"></script>
+
+<div id=a style="margin:10px"></div>
+
+<script>
+runproteinpaint({
+    host: "https://proteinpaint.stjude.org/",
+    holder: document.getElementById('a'),
+    parseurl: true,
+    block: true,
+    nobox: 1,
+    noheader: 1,
+    genome: "hg38",
+    position: "chr5:1019543-1142903",
+    hlights: "chr5:1081895-1115816",
+    nativetracks: "RefGene",
+    tracks: [
+    {
+      __isgene: true,
+      translatecoding: true,
+      categories: {
+        coding: { color: '#004D99', label: 'Coding gene' },
+        nonCoding: { color: '#009933', label: 'Noncoding gene' },
+        problem: { color: '#FF3300', label: 'Problem' },
+        pseudo: { color: '#FF00CC', label: 'Pseudogene' }
+      },
+      type: 'bedj',
+      name: 'GENCODE v34',
+      stackheight: 16,
+      stackspace: 1,
+      vpad: 4,
+      //url: 'http://biostools/4472414/Shiny/References/proteinpaint/anno/gencode.v34.hg38.gz'
+      file: 'anno/gencode.v34.hg38.gz'
+    },
+   
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/blob/main/TCGA_AML/Junction_Counts_TD/BED_Files/bed_index/LAML_junctions.bed.sorted.gz",
+name: "LAML TCGA",
+height: 10,
+},
+    ]
+})
+
+</script>
+</body>
+</html>
