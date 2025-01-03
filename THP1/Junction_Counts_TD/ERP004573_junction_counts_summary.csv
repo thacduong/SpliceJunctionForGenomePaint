@@ -1,0 +1,4 @@
+"Chr","Start","End","Strand","Motif_Left","Motif_Right","Sum_Count","Expressing_Samples"
+"chr5",1043974,1045190,"+","GT","AG",1,0
+"chr5",1059750,1060176,"+","GT","AG",1,0
+"chr5",1079497,1081576,"-","CT","AC",1,0
