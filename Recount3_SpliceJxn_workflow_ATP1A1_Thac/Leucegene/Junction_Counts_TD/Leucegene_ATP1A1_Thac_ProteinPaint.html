@@ -1,0 +1,117 @@
+ <!DOCTYPE html>
+<html>
+<body>
+<script src="http://genomeproteinpaint.moffitt.org/bin/proteinpaint.js" charset="utf-8"></script>
+
+<div id=a style="margin:10px"></div>
+<!--<script src="http://genomeproteinpaint.moffitt.org/bin/proteinpaint.js" charset="utf-8"></script>-->
+<script src="https://proteinpaint.stjude.org/bin/proteinpaint.js" charset="utf-8"></script>
+
+<div id=a style="margin:10px"></div>
+
+<script>
+runproteinpaint({
+    host: "https://proteinpaint.stjude.org/",
+    holder: document.getElementById('a'),
+    parseurl: true,
+    block: true,
+    nobox: 1,
+    noheader: 1,
+    genome: "hg38",
+    position: "chr1:116390757-116418654",
+    hlights: "chr1:116390757-116418654",
+    nativetracks: "RefGene",
+    tracks: [
+    {
+      __isgene: true,
+      translatecoding: true,
+      categories: {
+        coding: { color: '#004D99', label: 'Coding gene' },
+        nonCoding: { color: '#009933', label: 'Noncoding gene' },
+        problem: { color: '#FF3300', label: 'Problem' },
+        pseudo: { color: '#FF00CC', label: 'Pseudogene' }
+      },
+      type: 'bedj',
+      name: 'GENCODE v34',
+      stackheight: 16,
+      stackspace: 1,
+      vpad: 4,
+      //url: 'http://biostools/4472414/Shiny/References/proteinpaint/anno/gencode.v34.hg38.gz'
+      file: 'anno/gencode.v34.hg38.gz'
+    },
+   
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/raw/refs/heads/main/Recount3_SpliceJxn_workflow_ATP1A1_Thac/Leucegene/Junction_Counts_TD/BED_Files/bed_index/SRP056295_ATP1A1_junctions.bed.sorted.gz",
+name: "Leucegene SRP056295 ATP1A1",
+height: 10,
+},
+
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/raw/refs/heads/main/Recount3_SpliceJxn_workflow_ATP1A1_Thac/Leucegene/Junction_Counts_TD/BED_Files/bed_index/SRP048759_ATP1A1_junctions.bed.sorted.gz",
+name: "Leucegene SRP048759 ATP1A1",
+height: 10,
+},
+
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/raw/refs/heads/main/Recount3_SpliceJxn_workflow_ATP1A1_Thac/Leucegene/Junction_Counts_TD/BED_Files/bed_index/SRP033266_ATP1A1_junctions.bed.sorted.gz",
+name: "Leucegene SRP033266 ATP1A1",
+height: 10,
+},
+
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/raw/refs/heads/main/Recount3_SpliceJxn_workflow_ATP1A1_Thac/Leucegene/Junction_Counts_TD/BED_Files/bed_index/SRP028567_ATP1A1_junctions.bed.sorted.gz",
+name: "Leucegene SRP028567 ATP1A1",
+height: 10,
+},
+
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/raw/refs/heads/main/Recount3_SpliceJxn_workflow_ATP1A1_Thac/Leucegene/Junction_Counts_TD/BED_Files/bed_index/SRP056197_ATP1A1_junctions.bed.sorted.gz",
+name: "Leucegene SRP056197 ATP1A1",
+height: 10,
+},
+
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/raw/refs/heads/main/Recount3_SpliceJxn_workflow_ATP1A1_Thac/Leucegene/Junction_Counts_TD/BED_Files/bed_index/SRP032455_ATP1A1_junctions.bed.sorted.gz",
+name: "Leucegene SRP032455 ATP1A1",
+height: 10,
+},
+
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/raw/refs/heads/main/Recount3_SpliceJxn_workflow_ATP1A1_Thac/Leucegene/Junction_Counts_TD/BED_Files/bed_index/SRP122507_ATP1A1_junctions.bed.sorted.gz",
+name: "Leucegene SRP122507 ATP1A1",
+height: 10,
+},
+
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/raw/refs/heads/main/Recount3_SpliceJxn_workflow_ATP1A1_Thac/Leucegene/Junction_Counts_TD/BED_Files/bed_index/SRP028594_ATP1A1_junctions.bed.sorted.gz",
+name: "Leucegene SRP028594 ATP1A1",
+height: 10,
+},
+
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/raw/refs/heads/main/Recount3_SpliceJxn_workflow_ATP1A1_Thac/Leucegene/Junction_Counts_TD/BED_Files/bed_index/SRP098651_ATP1A1_junctions.bed.sorted.gz",
+name: "Leucegene SRP098651 ATP1A1",
+height: 10,
+},
+
+{
+type: "junction",
+url: "https://github.com/thacduong/SpliceJunctionForGenomePaint/raw/refs/heads/main/Recount3_SpliceJxn_workflow_ATP1A1_Thac/Leucegene/Junction_Counts_TD/BED_Files/bed_index/SRP028554_ATP1A1_junctions.bed.sorted.gz",
+name: "Leucegene SRP028554 ATP1A1",
+height: 10,
+},
+    ]
+})
+
+</script>
+</body>
+</html>
