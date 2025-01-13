@@ -1,0 +1,10 @@
+sh bigzip_tabix.sh SRP056295_SLC12A7_junctions.bed
+sh bigzip_tabix.sh SRP048759_SLC12A7_junctions.bed
+sh bigzip_tabix.sh SRP033266_SLC12A7_junctions.bed
+sh bigzip_tabix.sh SRP028567_SLC12A7_junctions.bed
+sh bigzip_tabix.sh SRP056197_SLC12A7_junctions.bed
+sh bigzip_tabix.sh SRP032455_SLC12A7_junctions.bed
+sh bigzip_tabix.sh SRP122507_SLC12A7_junctions.bed
+sh bigzip_tabix.sh SRP028594_SLC12A7_junctions.bed
+sh bigzip_tabix.sh SRP098651_SLC12A7_junctions.bed
+sh bigzip_tabix.sh SRP028554_SLC12A7_junctions.bed
