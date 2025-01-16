@@ -15,8 +15,37 @@ library(GenomicRanges)
 library(org.Hs.eg.db)
 library(dplyr)
 
+##### Step 1: Set Working Directory #####
+work_dir = "C:/Users/80026261/OneDrive - Moffitt Cancer Center/Desktop/Perna Leukemia Proj/Recount3_SpliceJxn_workflow_SLC12A7_Thac"
+setwd(work_dir)
 
-##### Step 1: Define Function to Analyze a Project #####
+##### Step 2: Define Gene Region and Project IDs #####
+# Region of Interest
+splice_junction = "SLC12A7"
+gene_chr = "5" # SLC12A7
+gene_start = 1081895
+gene_end = 1115816
+
+project = "Leucegene"
+project_ids = c(
+  "SRP056295",
+  "SRP048759",
+  "SRP033266",
+  "SRP028567",
+  "SRP056197",
+  "SRP032455",
+  "SRP122507",
+  "SRP028594",
+  "SRP098651",
+  "SRP028554"
+) # Leucegene
+
+# project = "TCGA_AML"
+# project_ids = c(
+#   "LAML" # TCGA_AML
+# )
+
+##### Step 3: Define Function to Analyze a Project #####
 analyze_project <- function(project_id, gene_chr, gene_start, gene_end, output_file) {
   # Find available projects in recount3
   available_projects <- available_projects()
@@ -80,45 +109,21 @@ analyze_project <- function(project_id, gene_chr, gene_start, gene_end, output_f
   # Save results to file
   write.csv(junction_table, output_file, row.names = FALSE)
   
-  cat(paste("Results for project", project_id, "saved to", output_file, "\n"))
+  cat(paste("Results for project", project_id, "_",  splice_junction, "saved to", output_file, "\n"))
 }
 
-##### Step 2: Define Gene Region and Project IDs #####
-gene_chr = "5"
-gene_start = 1039996
-gene_end = 1119138
-project_ids = c(
-  "SRP215279",
-  "SRP213631",
-  "SRP107875",
-  "SRP188099",
-  "SRP153417",
-  "SRP120559",
-  "ERP004573",
-  "SRP128903",
-  "SRP127832",
-  "SRP068909",
-  "SRP125444",
-  "SRP045986",
-  "SRP064735",
-  "SRP048744",
-  "SRP012695",
-  "SRP153913",
-  "SRP018312"
-) # THP1 studies
-
-##### Step 3: Analyse Each Project #####
-output_dir <- "C:/Users/80026261/OneDrive - Moffitt Cancer Center/Desktop/Perna Leukemia Proj/Recount3_SpliceJxn_workflow_Thac/THP1/Junction_Counts_TD"
+##### Step 4: Analyse Each Project #####
+output_dir <- paste0(work_dir, "/", project, "/Junction_Counts_TD")
 if (!dir.exists(output_dir)) dir.create(output_dir)
 
 for (project_id in project_ids) {
-  output_file <- file.path(output_dir, paste0(project_id, "_junction_counts.csv"))
+  output_file <- file.path(output_dir, paste0(project_id, "_", splice_junction, "_junction_counts.csv"))
   analyze_project(project_id, gene_chr, gene_start, gene_end, output_file)
 }
 
 cat("Analysis completed for all projects.\n")
 
-##### Step 4: Convert Junction Counts to BED Files #####
+##### Step 5: Convert Junction Counts to BED Files #####
 convert_to_bed <- function(jxn_count, bed_file, include_both_motifs = TRUE) {
   # Load the junction table
   junction_table <- read.csv(jxn_count)
@@ -158,7 +163,7 @@ convert_to_bed <- function(jxn_count, bed_file, include_both_motifs = TRUE) {
   cat(paste("BED file created:", bed_file, "\n"))
 }
 
-##### Step 5: Summarize Junction Expression Across Samples #####
+##### Step 6: Summarize Junction Expression Across Samples #####
 summarize_junction_expression <- function(jxn_count, cutoff = 3) {
   # Load the junction table
   junction_table <- read.csv(jxn_count)
@@ -184,8 +189,8 @@ if (!dir.exists(output_bed_dir)) dir.create(output_bed_dir)
 
 for (project_id in project_ids) {
   # Input CSV and output BED paths
-  jxn_count <- file.path(output_dir, paste0(project_id, "_junction_counts.csv"))
-  bed_file <- file.path(output_bed_dir, paste0(project_id, "_junctions.bed"))
+  jxn_count <- file.path(output_dir, paste0(project_id, "_", splice_junction, "_junction_counts.csv"))
+  bed_file <- file.path(output_bed_dir, paste0(project_id, "_", splice_junction, "_junctions.bed"))
   
   # Convert to BED format
   convert_to_bed(jxn_count, bed_file)
